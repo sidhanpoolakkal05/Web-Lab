@@ -1,0 +1,19 @@
+
+
+.margin {
+
+  margin:20px;
+  
+}
+
+.container{
+      
+  background-color: white; 
+  border: 2px solid black;   
+  border-radius: 8px;  
+  padding: 20px;       
+  margin: 15px; 
+
+}
+
+
