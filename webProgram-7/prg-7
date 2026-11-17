@@ -1,0 +1,50 @@
+<html>
+ <head>
+   <title> Program 7</title>
+  </head>
+  
+  <style>
+  
+  h3{
+  margin-left: 500px;
+  }
+  
+  .button{
+    
+	  margin-left: 600px;
+	  margin-top: 300px;
+	  padding: 20px;
+    }
+  	
+  
+  </style>
+  
+  
+  <body>
+  
+     
+  
+      <button class="button" onclick="background()" >Click me</button>
+  	<h3 > To change background Color <h3>
+ 
+  
+ 	 <script>
+  
+  		function background(){
+  		
+  		var r=Math.floor(Math.random()*256);
+  		var g=Math.floor(Math.random()*256);
+  		var b=Math.floor(Math.random()*256);
+  		
+  		
+  		document.body.style.backgroundColor="rgb("+r+","+g+","+b+")";
+  		}
+  
+  
+ 	 </script>
+    </body>
+ </html>
+ 
+ 
+ 
+ 
