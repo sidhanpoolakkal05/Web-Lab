@@ -1,0 +1,90 @@
+<html>
+ <head>
+  <title> Program 9 </title>
+ </head>
+ 
+ <body>
+ 
+ <h1>FORM VALIDATION </h1>
+ 
+ <form name="form" action="" onsubmit="return validateForm()">
+ 	
+ 	<label>Name:</label>
+ 	
+ 	<select>
+ 	  <option>Mr</option>
+ 	  <option>Mrs</option>
+ 	  
+ 	</select>
+ 	
+ 	<input type="text" id="fname" name="fname" placeholder="Enter your Name " >  <br> <br>
+ 	
+ 	<label>Phone:</label>
+ 	
+ 	<select>
+ 	  <option>+91</option>
+ 	  <option>+44</option>
+ 	  <option>+1</option>
+ 	</select>
+ 	
+ 	<input type="tel" id="pnum" name="pnum" placeholder="Enter Mobile Number " > <br> <br>
+ 	
+ 	<label>Email :</label>
+ 	<input type="text" id="email" name="email" placeholder="Enter Email " > <br> <br>
+ 	
+ 	<button style="padding:50px;" type="submit">Submit</button>
+ 	
+ </form>
+ 
+ <script>
+ 
+ 	function validateForm(){
+ 	
+ 	var fname=document.form.fname.value.trim();
+ 	var pnum=document.form.pnum.value.trim();
+ 	var email=document.form.email.value.trim();
+ 	
+ 	
+ 	if(fname==""){
+ 	  alert("Enter Your name");
+ 	  document.form.fname.focus();
+ 	  return false;
+ 	
+ 	}else if(!/^[a-zA-Z\s]+$/.test(fname)){
+ 	  alert("Enter a Valid Name");
+ 	  document.form.fname.focus();
+ 	  return false;
+ 	}
+ 	
+ 	if(pnum==""){
+ 	  alert("Enter yout Phone Number ")
+ 	  document.form.pnum.focus();
+ 	  return false;
+ 	
+ 	}else if(!/^[0-9]{10}$/.test(pnum)){
+ 	  alert("Enter a Valid 10-digit Mobile Number")
+ 	  document.form.pnum.focus();
+ 	  return false;
+ 	}
+ 	
+ 	if(email==""){
+ 	  alert("Enter your Email");
+ 	  document.form.email.focus();
+ 	  return false;
+ 	
+ 	}else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+ 	  alert("Enter a Valid Email ID ");
+ 	  document.form.email.focus();
+ 	  return false;
+ 	
+ 	}
+ 	
+ 	alert("Form Submitted Successfully");
+ 	return true;
+ 	
+ }
+ 
+ </script>
+ </body>
+
+</html>
